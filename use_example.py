@@ -20,6 +20,7 @@ def index():
 
 {_.Body.open()}
 {_.Body.h1("Welcome!")}
+{_.Body.a(content=_.Body.button(content="Open Discord =>"),href="https://discord.com/app")}
 {_.Body.close()}
     """
     )

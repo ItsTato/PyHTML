@@ -22,13 +22,13 @@ class Body():
         return "<body>"
     
     def p(content:str,css:str=None):
-        return f"<p{' style=\"'+css+'\"' if not css == None else ''}>{str(content)}</p>"
+        return f"""<p{' style="'+css+'"' if not css == None else ''}>{str(content)}</p>"""
 
     def a(content:str,href:str=None):
-        return f"<a{' href=\"'+href+'\"' if not href == None else ''}>{content}</a>"
+        return f"""<a{' href="'+href+'"' if not href == None else ''}>{content}</a>"""
     
     def button(content:str,css:str=None):
-        return f"<button{' style=\"'+css+'\"' if not css == None else ''}>{str(content)}</button>"
+        return f"""<button{' style="'+css+'"' if not css == None else ''}>{str(content)}</button>"""
 
     def h1(content:str="Header 1"):
         return f"<h1>{str(content)}</h1>"
