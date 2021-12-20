@@ -8,7 +8,7 @@ setup(
   author = 'ItsTato',
   author_email = 'thatcoolcomputer@gmail.com',
   url = 'https://github.com/user/reponame',
-  download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',
+  download_url = 'https://github.com/ItsTato/PyHTML/archive/refs/tags/v0.3.4.tar.gz',
   keywords = ['HTML', 'PYTHON-HTML', 'PYTHON HTML'],
   install_requires=[],
   classifiers=[
