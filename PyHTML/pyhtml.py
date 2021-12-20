@@ -1,12 +1,4 @@
 
-# def HTML(html:str,doctype:str="html"):
-#   return f"""
-#<!DOCTYPE {doctype}>
-#<html>
-#{html}
-#</html>
-#   """
-
 class Internal():
     def __init__(self):
         self.Utils = Internal.Utils(__name__)

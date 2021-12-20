@@ -1,8 +1,8 @@
 from distutils.core import setup
 setup(
   name = 'Aod_PyHTML',
-  packages = ['Aod_PyHTML'],
-  version = '0.4.0',
+  packages = ['PyHTML'],
+  version = '0.4.1',
   license='GNU GPLv3',
   description = 'HTML but it\'s Python.',
   author = 'ItsTato',
