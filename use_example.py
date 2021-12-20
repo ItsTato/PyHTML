@@ -7,7 +7,7 @@
 
 import flask
 
-from PythonHTML.pyhtml import Site, HTML, Locations
+from Aod_PyHTML.pyhtml import Site, HTML, Locations
 
 app = flask.Flask(__name__)
 
