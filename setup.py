@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'Aod_PyHTML',
   packages = ['PyHTML'],
-  version = '0.4.1',
+  version = '0.4.2',
   license='GNU GPLv3',
   description = 'HTML but it\'s Python.',
   author = 'ItsTato',
@@ -17,5 +17,6 @@ setup(
     'Topic :: Software Development :: Build Tools',
     'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
     'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.9',
   ],
 )
