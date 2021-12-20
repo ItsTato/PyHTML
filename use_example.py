@@ -7,24 +7,17 @@
 
 import flask
 
-import pyhtml as _
+from src.pyhtml import Site, HTML, Locations
 
 app = flask.Flask(__name__)
 
 @app.route("/",methods=["GET"])
 def index():
-    return _.HTML(code=f"""
-{_.Head.open()}
-{_.Head.title(title="Some Site")}
-{_.Head.close()}
-
-{_.Body.open()}
-{_.Body.h1("Welcome!")}
-{_.Body.a(content=_.Body.button(content="Open Google =>"),href="https://google.com/")}
-{_.Body.a(content=_.Body.button(content="Open Discord =>"),href="https://discord.com/app")}
-{_.Body.close()}
-    """
-    )
+    Index = Site()
+    Index.add_element(location=Locations.header, element=HTML.title("OwO"))
+    Index.add_element(location=Locations.body, element="Hewwo!")
+    Index.build()
+    return Index.html
 
 app.run(host="0.0.0.0",port="80",debug=True)
 
