@@ -7,7 +7,7 @@
 
 import flask
 
-from Aod_PyHTML.pyhtml import Site, HTML, Locations
+from PyHTML import Site, Locations, HTML
 
 app = flask.Flask(__name__)
 
@@ -20,4 +20,3 @@ def index():
     return Index.html
 
 app.run(host="0.0.0.0",port="80",debug=True)
-
