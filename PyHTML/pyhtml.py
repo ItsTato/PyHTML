@@ -1,82 +1,73 @@
 
-class Internal():
-    def __init__(self):
-        self.Utils = Internal.Utils(__name__)
-        self.Utils.main_file_check()
+class Utils():
+	def __init__(self) -> None:
+		import os,sys
+		self.os,self.sys = os,sys
+	def clear_console(self) -> None:
+		self.os.system("cls" if self.os.name in ["nt","dos"] else "clear")
 
-    class Utils():
-        def __init__(self,name) -> None:
-            import os,sys
-            self.os,self.sys = os,sys
-            self.name = name
-        def clear_console(self) -> None:
-            self.os.system("cls" if self.os.name in ["nt"] else "clear")
-        def main_file_check(self) -> None:
-            if self.name == "__main__": print("You cannot run this file individually."); self.sys.exit(1)
+class Chars:
+	@staticmethod
+	def Quote() -> str:
+		return "\""
 
-    class Chars():
-        def Quote() -> str:
-            return "\""
+class Locations:
+	@staticmethod
+	def ROOT() -> None:
+		return
+	@staticmethod
+	def HEADER() -> None:
+		return
+	@staticmethod
+	def BODY() -> None:
+		return
 
-Internal = Internal()
-Internal.Utils.main_file_check()
+class HTML:
+	def __init__(self) -> None:
+		pass
 
-class Locations():
+	@staticmethod
+	def title(title:str) -> str:
+		return f"<title>{title}</title>"
 
-    def root() -> str:
-        return "root"
+class Site:
+	def __init__(self) -> None:
+		self._html:str = ""
+		self.elements:list = [ ]
+		self.header_elements:list = [ ]
+		self.body_elements:list = [ ]
+		self.css_classes:dict = { }
 
-    def header() -> str:
-        return "header"
+	def add_element(self,location,element:str) -> None:
+		if location == Locations.ROOT:
+			self.elements.append(element)
+		if location == Locations.HEADER:
+			self.header_elements.append(element)
+		if location == Locations.BODY:
+			self.body_elements.append(element)
 
-    def body() -> str:
-        return "body"
-
-class HTML():
-
-    def __init__(self) -> None:
-        Internal.Utils.main_file_check()
-        pass
-
-    def title(title:str) -> str:
-        return f"<title>{title}</title>"
-
-class Site():
-    def __init__(self) -> None:
-        Internal.Utils.main_file_check()
-        self.elements = [ ]
-        self.header_elements = [ ]
-        self.body_elements = [ ]
-        self.css_classes = { }
-
-    def add_element(self,location:str,element:str) -> None:
-        if location == Locations.root:
-            self.elements.append(element)
-        if location == Locations.header:
-            self.header_elements.append(element)
-        if location == Locations.body:
-            self.body_elements.append(element)
-
-    def build(self) -> None:
-        Elements = ""
-        for Element in self.header_elements:
-            Elements = f"{Elements}{Element}"
-        Header = ""
-        for Element in self.header_elements:
-            Header = f"{Header}{Element}"
-        Body = ""
-        for Element in self.body_elements:
-            Body = f"{Body}{Element}"
-        self.html = f"""<!DOCTYPE html>
+	def build(self) -> None:
+		Elements = ""
+		for Element in self.header_elements:
+			Elements = f"{Elements}{Element}"
+		Header = ""
+		for Element in self.header_elements:
+			Header = f"{Header}{Element}"
+		Body = ""
+		for Element in self.body_elements:
+			Body = f"{Body}{Element}"
+		self._html = f"""<!DOCTYPE html>
 <html>
-    <head>
-        {Header}
-    </head>
-    <body>
-        {Body}
-    </body>
+	<head>
+		{Header}
+	</head>
+	<body>
+		{Body}
+	</body>
 </html>
-        """
+		"""
 
-    def html(self) -> str:
-        return self.html
+	@property
+	def html(self) -> str:
+		self.build()
+		return self._html

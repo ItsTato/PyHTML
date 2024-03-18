@@ -1,1 +1,1 @@
-from pyhtml import Locations, HTML, Site
+from .pyhtml import Locations, HTML, Site

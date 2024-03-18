@@ -1,3 +1,17 @@
 
 __pycache__/pyhtml.cpython-39.pyc
 dist/Aod_PyHTML-0.4.2.tar.gz
+.idea/misc.xml
+.idea/modules.xml
+.idea/PyHTML.iml
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
+Aod_PyHTML.egg-info/dependency_links.txt
+Aod_PyHTML.egg-info/PKG-INFO
+Aod_PyHTML.egg-info/SOURCES.txt
+Aod_PyHTML.egg-info/top_level.txt
+sites/__pycache__/index.cpython-310.pyc
+pyhtml/__pycache__/pyhtml.cpython-310.pyc
+pyhtml/__pycache__/__init__.cpython-310.pyc
+.idea/.gitignore
