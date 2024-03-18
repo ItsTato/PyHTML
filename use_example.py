@@ -16,7 +16,7 @@ app = flask.Flask(__name__)
 
 @app.route("/",methods=["GET"])
 def index():
-	Index.add_element(Locations.BODY, element="<p>You are ItsTato!</p>")
+	Index.add_element(Locations.BODY, element=HTML.paragraph("Username: ItsTato"))
 	return Index.html
 
 app.run(host="0.0.0.0",port="80",debug=True)

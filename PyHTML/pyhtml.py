@@ -26,9 +26,10 @@ class HTML:
 	def __init__(self) -> None:
 		pass
 
-	@staticmethod
 	def title(title:str) -> str:
 		return f"<title>{title}</title>"
+	def paragraph(text:str) -> str:
+		return f"<p>{text}</p>"
 
 class Site:
 	def __init__(self) -> None:
