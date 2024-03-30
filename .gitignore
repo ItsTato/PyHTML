@@ -1,5 +1,4 @@
-dist/
-Aod_PyHTML.egg-info/
-.vscode
 .idea
+.vscode
 *.pyc
+.venv
