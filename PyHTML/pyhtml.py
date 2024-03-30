@@ -57,7 +57,8 @@ class Site:
 		Body = ""
 		for Element in self.body_elements:
 			Body = f"{Body}{Element}"
-		self._html = f"""<!DOCTYPE html>
+		self._html = f"""<!-- Site generated with PyHTML. (pypi: aod_pyhtml) -->
+<!DOCTYPE html>
 <html>
 	<head>
 		{Header}
@@ -67,8 +68,16 @@ class Site:
 	</body>
 </html>
 		"""
+		return self._html
 
 	@property
 	def html(self) -> str:
-		self.build()
-		return self._html
+		return self.build()
+
+#class Component: # use <div> instead of <span>
+#	def __init__(self) -> None:
+#		return
+#class Button:
+#	def __init__(self,content:str="Click Me") -> None:#, Style:Style) -> None: ;; where Style is a custom class.
+#		self._html:str = f"<button>{content}</button>"
+#		return

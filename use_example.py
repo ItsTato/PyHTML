@@ -7,16 +7,17 @@
 
 import flask
 
-from pyhtml import Locations, HTML  # To add stuff that is dynamic like usernames
-                                    # or navbars, for example.
+from pyhtml import Locations, HTML, Site    # To add stuff that is dynamic like usernames
+                                            # or navbars, for example.
 
-from sites.index import Index       # Import the actual site.
+from sites.index import Index               # Import the actual site.
 
 app = flask.Flask(__name__)
 
 @app.route("/",methods=["GET"])
 def index():
-	Index.add_element(Locations.BODY, element=HTML.paragraph("Username: ItsTato"))
-	return Index.html
+	site = Index()
+	site.add_element(Locations.BODY, element=HTML.paragraph("Username: ItsTato"))
+	return site.html
 
 app.run(host="0.0.0.0",port="80",debug=True)

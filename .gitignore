@@ -15,3 +15,4 @@ sites/__pycache__/index.cpython-310.pyc
 pyhtml/__pycache__/pyhtml.cpython-310.pyc
 pyhtml/__pycache__/__init__.cpython-310.pyc
 .idea/.gitignore
+components/__pycache__/buttons.cpython-310.pyc
