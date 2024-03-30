@@ -25,7 +25,6 @@ class Locations:
 class HTML:
 	def __init__(self) -> None:
 		pass
-
 	def title(title:str) -> str:
 		return f"<title>{title}</title>"
 	def paragraph(text:str) -> str:

@@ -1,4 +1,4 @@
-from pyhtml import Site, Locations, HTML
+from PyHTML import Site, Locations, HTML
 from components.buttons import DefaultButton
 
 class Index(Site):

@@ -1,4 +1,4 @@
-from pyhtml import Locations, HTML
+from PyHTML import Locations, HTML
 
 class DefaultButton:
 	def __init__(self) -> None:
